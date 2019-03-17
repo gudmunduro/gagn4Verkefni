@@ -68,8 +68,8 @@ for (year in years) {
   year_id <- ((round(year * 2, -1) / 2) - 1965) / 5
   year_dd <- rowSums(uk_dd_m)[year - 1968]
 
-  is_dd <- year_dd / pop_uk[year_id] * pop_is[year_id]
-  print(paste("Það lentu", uk_dd, "í alvarlegu umferðarslysi árið", year))
-  print(paste("Það væru", is_dd, "á íslandi"))
+  is_dd_m <- year_dd / pop_uk[year_id] * pop_is[year_id]
+  print(paste("Það lentu", year_dd, "í alvarlegu umferðarslysi árið", year))
+  print(paste("Það væru", round(is_dd_m, 0), "á íslandi"))
 }
 
